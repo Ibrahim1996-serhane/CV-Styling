@@ -1,169 +1,169 @@
-
-    
-
-header{
-    background-color: grey;
+hgroup h1{
+    border-bottom: 2px grey solid;
 }
-header div{
-    display: flex;
-     margin-left: 180px;
-    
+figure{
+    position:absolute;
+    top: 1px;
+    right: 15rem;
+    transform: rotate(-15deg);  
 }
-.content{
- display: grid;
- grid-template-columns: 50% 50%;
- /* grid-gap: 10px; */
- grid-row-start: 1;
- grid-row-end: 3;
- /*text-align: center;*/
- background-color: rgba(255, 255, 255, 0.8);
- width:80%;
- margin: 20px auto 0 auto;
- /* margin: top right bottom left; */
-}
-
-.contacts{
-position:absolute;
-top: 1rem;
-
-
-}
-h3::before {
-    content: "";
-    display: inline-block;
-    background-color: red;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-}
-h4{
-    color:red;
-}
-.experience-institution{
-    font-weight: 200;
-}
-.experience-details{
-    opacity: 50%;
-   margin-top: 2px;
-}
-hgroup{
-    color:red;
-
-}
-.experience-institution::before {
-    content: "@";
-    display: inline-block;
-
-}
-#contact h3 {
-    display:none;
-}
-.contacts .contact{
-    display: flex;
+body{
     margin: 0;
+    padding: 0;
+    
 }
-.contact .contact-type{
-    background-color: red;
-    width:180px;
-    padding: 3px;
-    color: white;
+div[id="#wrapper"]{
+margin: 0 12em 0 12em;
 }
-.contact-value{
-    background-color:black; 
-    width:800px;
-    padding: 3px;
-    margin-left: 1px;
+#about{
+    opacity: 50%;
+}
+#about p {
+width: 70%;
+}
+#about h3,
+hgroup h2,
+#contact h3,
+.experience .experience-institution,
+.contact.contact-skype,
+dt,
+a
+{
+    display: none;
+}
 
+#competencies{
+height: 12vh;
+margin-top: 60px;
+grid-area: a; 
+display: grid;
+grid-template-columns: auto 1fr;
+grid-template-areas: "a b" 
+                     "a c";
 }
-#contact a{
-    color: red;
-    text-decoration: none;
-
+#competencies .skills.skills-primary{
+grid-area: b;
+display: flex;
+border-left:1px solid rgb(53, 49, 47)l;
+padding-left: 10px;
+gap:5px;
+padding-bottom:5px;
 }
-#competencies .skills-primary::before{ /**/
-    content: "Main";
-    display: inline-block;
-
-}
-#competencies .skills-secondary::before{
-    content: "Other";
-    display: inline-block;
-
-}
-#competencies .skills .skill{
-    margin-top: 3px;
-    height: 35px;
-    background-color:grey;
+#competencies .skills.skills-secondary{
+    grid-area: c;
+    display: flex;
+    border-left:1px solid rgb(53, 49, 47);
+    gap:5px;
+    padding-bottom:5px;
+    padding-left: 10px;
+    }
+.skill span{
+    background-color: rgb(64 ,124, 107);   
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 150px;
+    padding: 15px;  
+    color: white;
+} 
+#competencies .skills-primary .skill[data-skill="5"] span::after{
+    content:"★★★";
+    color: white;
 }
-#competencies .skills-primary .skill[data-skill="5"] span{
-    margin: 5px;
-    padding: 4px;
-    color: #fff;
-    background-color: red;
-    width:50%;
+#competencies .skills-primary .skill[data-skill="3"] span::after{
+    content:"★★";
+    color: white;
 }
-#competencies .skills-primary .skill[data-skill="3"] span{
-    margin: 5px;
-    padding: 4px;
-    color: #fff;
-    background-color: red;
-    width:35%;
+#competencies .skills-primary .skill[data-skill="1"] span::after{
+    content:"★";
+    color: white;
 }
-#competencies .skills-primary .skill[data-skill="1"] span{
-    margin: 5px;
-    padding: 4px;
-    color: #fff;
-    background-color: red;
-    width:19%;
+#competencies .skills-secondary .skill[data-skill="9"] span::after{
+    content:"★★★★★";
+    color: white;
 }
-#competencies .skills-secondary .skill[data-skill="9"] span{
-    margin: 5px;
-    padding: 4px;
-    color: #fff;
-    background-color: rgb(219, 64, 90);
-    width:90%;
+#competencies .skills-secondary .skill[data-skill="5"] span::after{
+    content:"★★★";
+    color: white;
 }
-#competencies .skills-secondary .skill[data-skill="5"] span{
-    margin: 5px;
-    padding: 4px;
-    color: #fff;
-    background-color:rgb(219, 64, 90);
-    width:50%;
+#competencies .skills-secondary .skill[data-skill="7"] span::after{
+    content:"★★★★★";
+    color: white;
 }
-#competencies .skills-secondary .skill[data-skill="7"] span{
-    margin: 5px;
-    padding: 4px;
-    color: #fff;
-    background-color:rgb(219, 64, 90);
-    width:75%;
+#experiences, #education{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin-top:3em;
+    grid-template-areas: "d e" 
+                         "d e";
+                         
 }
-.content section h3 {
-    border-bottom:1px gray solid;
-    padding-bottom: 10px;
-
+#experiences h3 ,#education h3 {
+    grid-area: d;
 }
-  
-@media  screen and (max-width:800px){
-    .contacts{
-        position: relative;
+.experience{
+    /* grid-area: e; * taken by default*/
+    margin-left: 14px;
+    padding-left: 10px;
+    display: grid;
+    border-left:1px solid rgb(53, 49, 47) ;
+    grid-template-areas: "f g"
+                         "f g" ;
+                         
+}
+#education h3 {
+    padding-right: 10px;
+}
+#hobbies {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+#hobbies ul{
+    border-left:1px solid rgb(53, 49, 47) ; 
+    padding-left: 30px;
+    margin-left: 40px;
+}
+#contact .contacts .contact-email  {
+    background-image: url('/public/images/email.png');
+    width:120px;
+    height:70px; 
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    display: flex;
     }
-    .content{
-        display: block;
-
-       }
-    #contact h3 {
-        display:block;
-    }
-    .contact-value{
-        background-color:white; 
-    }
-    .contact .contact-type{
-        width:300px;
-        
+#contact .contacts .contact-phone {
     
-  
+    background-image: url('/public/images/phone.png');
+    width:120px;
+    height:70px; 
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+
     }
+#contact .contacts .contact-github {
+    background-image: url('/public/images/github.png');
+    width:120px;
+    height:70px; 
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+  
+
+    }
+#contact .contacts .contact-facebook {
+    background-image: url('/public/images/facebook.png');
+    width:120px;
+    height:70px; 
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+
+    }
+.contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
+
