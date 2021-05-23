@@ -1,0 +1,169 @@
+
+    
+
+header{
+    background-color: grey;
+}
+header div{
+    display: flex;
+     margin-left: 180px;
+    
+}
+.content{
+ display: grid;
+ grid-template-columns: 50% 50%;
+ /* grid-gap: 10px; */
+ grid-row-start: 1;
+ grid-row-end: 3;
+ /*text-align: center;*/
+ background-color: rgba(255, 255, 255, 0.8);
+ width:80%;
+ margin: 20px auto 0 auto;
+ /* margin: top right bottom left; */
+}
+
+.contacts{
+position:absolute;
+top: 1rem;
+
+
+}
+h3::before {
+    content: "";
+    display: inline-block;
+    background-color: red;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+h4{
+    color:red;
+}
+.experience-institution{
+    font-weight: 200;
+}
+.experience-details{
+    opacity: 50%;
+   margin-top: 2px;
+}
+hgroup{
+    color:red;
+
+}
+.experience-institution::before {
+    content: "@";
+    display: inline-block;
+
+}
+#contact h3 {
+    display:none;
+}
+.contacts .contact{
+    display: flex;
+    margin: 0;
+}
+.contact .contact-type{
+    background-color: red;
+    width:180px;
+    padding: 3px;
+    color: white;
+}
+.contact-value{
+    background-color:black; 
+    width:800px;
+    padding: 3px;
+    margin-left: 1px;
+
+}
+#contact a{
+    color: red;
+    text-decoration: none;
+
+}
+#competencies .skills-primary::before{ /**/
+    content: "Main";
+    display: inline-block;
+
+}
+#competencies .skills-secondary::before{
+    content: "Other";
+    display: inline-block;
+
+}
+#competencies .skills .skill{
+    margin-top: 3px;
+    height: 35px;
+    background-color:grey;
+    display: flex;
+    align-items: center;
+}
+#competencies .skills-primary .skill[data-skill="5"] span{
+    margin: 5px;
+    padding: 4px;
+    color: #fff;
+    background-color: red;
+    width:50%;
+}
+#competencies .skills-primary .skill[data-skill="3"] span{
+    margin: 5px;
+    padding: 4px;
+    color: #fff;
+    background-color: red;
+    width:35%;
+}
+#competencies .skills-primary .skill[data-skill="1"] span{
+    margin: 5px;
+    padding: 4px;
+    color: #fff;
+    background-color: red;
+    width:19%;
+}
+#competencies .skills-secondary .skill[data-skill="9"] span{
+    margin: 5px;
+    padding: 4px;
+    color: #fff;
+    background-color: rgb(219, 64, 90);
+    width:90%;
+}
+#competencies .skills-secondary .skill[data-skill="5"] span{
+    margin: 5px;
+    padding: 4px;
+    color: #fff;
+    background-color:rgb(219, 64, 90);
+    width:50%;
+}
+#competencies .skills-secondary .skill[data-skill="7"] span{
+    margin: 5px;
+    padding: 4px;
+    color: #fff;
+    background-color:rgb(219, 64, 90);
+    width:75%;
+}
+.content section h3 {
+    border-bottom:1px gray solid;
+    padding-bottom: 10px;
+
+}
+  
+@media  screen and (max-width:800px){
+    .contacts{
+        position: relative;
+    }
+    .content{
+        display: block;
+
+       }
+    #contact h3 {
+        display:block;
+    }
+    .contact-value{
+        background-color:white; 
+    }
+    .contact .contact-type{
+        width:300px;
+        
+    
+  
+    }
+}
